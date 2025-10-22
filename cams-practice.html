@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CAMS Practice - Nathan Spinder</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    /* Quiz layout */
+    .quiz-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 20px 0;
+    }
+
+    .quiz-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .quiz-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .quiz-card form {
+      margin-top: 10px;
+    }
+
+    .quiz-card label {
+      display: block;
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .quiz-card label:hover {
+      background: #232323;
+    }
+
+    .quiz-card input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    .quiz-card button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    .quiz-card button:hover {
+      opacity: 0.9;
+    }
+
+    .feedback {
+      margin-top: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .correct { color: #22c55e; }
+    .incorrect { color: #ef4444; }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .cta-section a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .cta-section a:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="container" role="navigation" aria-label="Main navigation">
+    <div class="brand">
+      <img src="assets/AML logo.jpg" alt="AML Logo" class="logo" />
+      <strong>AML Specialist</strong>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="cams-practice.html" class="active">CAMS Practice</a></li>
+        <li><a href="aml-news.html">AML In The News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="section-title">CAMS Practice Questions</h2>
+      <p style="color:var(--muted);">
+        Test your knowledge with these CAMS-style sample questions. Select an answer, submit, and review the explanation to strengthen your understanding.
+      </p>
+    </section>
+
+    <div class="quiz-container">
+      <!-- Question 1 -->
+      <section class="quiz-card" id="q1">
+        <h3>1. Which of the following best describes the purpose of Customer Due Diligence (CDD)?</h3>
+        <form>
+          <label><input type="radio" name="q1" value="a"> To verify a customer's identity and assess their risk of involvement in money laundering</label>
+          <label><input type="radio" name="q1" value="b"> To report suspicious transactions to regulators</label>
+          <label><input type="radio" name="q1" value="c"> To monitor all transactions equally, regardless of customer type</label>
+          <label><input type="radio" name="q1" value="d"> To detect insider trading</label>
+          <button type="button" onclick="checkAnswer('q1', 'a')">Submit</button>
+        </form>
+        <div id="feedback-q1" class="feedback"></div>
+      </section>
+
+      <!-- Question 2 -->
+      <section class="quiz-card" id="q2">
+        <h3>2. A Suspicious Activity Report (SAR) should generally be filed:</h3>
+        <form>
+          <label><input type="radio" name="q2" value="a"> Immediately upon the first indication of suspicious behavior</label>
+          <label><input type="radio" name="q2" value="b"> Within 30 calendar days after detecting facts that may constitute suspicious activity</label>
+          <label><input type="radio" name="q2" value="c"> Only after confirming a crime has been committed</label>
+          <label><input type="radio" name="q2" value="d"> Within one year after account closure</label>
+          <button type="button" onclick="checkAnswer('q2', 'b')">Submit</button>
+        </form>
+        <div id="feedback-q2" class="feedback"></div>
+      </section>
+
+      <!-- Question 3 -->
+      <section class="quiz-card" id="q3">
+        <h3>3. What is the primary goal of ongoing transaction monitoring in an AML program?</h3>
+        <form>
+          <label><input type="radio" name="q3" value="a"> To detect unusual activity that may indicate money laundering or terrorist financing</label>
+          <label><input type="radio" name="q3" value="b"> To calculate tax liabilities for customers</label>
+          <label><input type="radio" name="q3" value="c"> To track the daily spending patterns of all clients equally</label>
+          <label><input type="radio" name="q3" value="d"> To ensure customers receive investment advice</label>
+          <button type="button" onclick="checkAnswer('q3', 'a')">Submit</button>
+        </form>
+        <div id="feedback-q3" class="feedback"></div>
+      </section>
+    </div>
+
+    <section class="cta-section">
+      <h3>Take Your Learning Further</h3>
+      <p style="color:var(--muted);">
+        Ready to master CAMS and strengthen your AML expertise?  
+        Book a <strong>free one-on-one consultation</strong> and receive a full CAMS practice test!
+      </p>
+      <a href="contact.html">Get Your Free Practice Test</a>
+    </section>
+  </main>
+
+  <footer class="container" style="padding-bottom:40px;">
+    © Nathan Spinder. All rights reserved.
+  </footer>
+
+  <script>
+    function checkAnswer(questionId, correctAnswer) {
+      const selected = document.querySelector('input[name="' + questionId + '"]:checked');
+      const feedback = document.getElementById('feedback-' + questionId);
+      if (!selected) {
+        feedback.innerHTML = "<span class='incorrect'>Please select an answer before submitting.</span>";
+        return;
+      }
+      if (selected.value === correctAnswer) {
+        feedback.innerHTML = "<span class='correct'>✅ Correct!</span> " + getExplanation(questionId);
+      } else {
+        feedback.innerHTML = "<span class='incorrect'>❌ Incorrect.</span> " + getExplanation(questionId);
+      }
+    }
+
+    function getExplanation(questionId) {
+      switch (questionId) {
+        case 'q1':
+          return " CDD verifies identity, understands customer relationships, and assesses money laundering risk — the foundation of any AML program.";
+        case 'q2':
+          return " Under most AML frameworks, SARs must be filed within 30 calendar days after detecting facts suggesting suspicious activity.";
+        case 'q3':
+          return " Transaction monitoring detects patterns or anomalies that may indicate money laundering or terrorist financing for further review.";
+        default:
+          return '';
+      }
+    }
+  </script>
+</body>
+</html>
